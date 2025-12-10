@@ -29,7 +29,7 @@ import {
   CHAT_MIN_INTERVAL_SECONDS,
   USER_EXPIRATION_TIME,
 } from "./_constants.js";
-import { refreshRoomPresence } from "./presence.js";
+import { refreshRoomPresence } from "./_presence.js";
 import { broadcastNewMessage, broadcastMessageDeleted } from "./_pusher.js";
 import { logInfo, logError } from "../utils/logging.js";
 import {
@@ -41,7 +41,7 @@ import {
   MAX_MESSAGE_LENGTH,
 } from "../utils/validation.js";
 import { createErrorResponse } from "./_helpers.js";
-import { ensureUserExists } from "./users.js";
+import { ensureUserExists } from "./_users.js";
 import type { Message, SendMessageData, GenerateRyoReplyData, BulkMessagesResult } from "./_types.js";
 import { ROOM_ID_REGEX } from "../utils/validation.js";
 

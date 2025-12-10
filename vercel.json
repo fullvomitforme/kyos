@@ -1,4 +1,5 @@
 {
+  "buildCommand": "rm -rf .vercel/output && bun run build",
   "devCommand": "bun run dev",
   "headers": [
     {
