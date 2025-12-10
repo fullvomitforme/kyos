@@ -37,7 +37,8 @@ export interface BaseApp<TInitialData = unknown> {
     | "synth"
     | "ipod"
     | "terminal"
-    | "applet-viewer";
+    | "applet-viewer"
+    | "pomodoro";
   name: string;
   icon: string | { type: "image"; src: string };
   description: string;

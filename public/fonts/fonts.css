@@ -1,5 +1,12 @@
 /* Font Face Declarations */
 
+/* Geist Font from Vercel CDN */
+@import url('https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-mono/style.min.css');
+@import url('https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-sans/style.min.css');
+
+/* Major Mono Display from Google Fonts (for flip clock digits) */
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
 @font-face {
   font-family: "ChicagoKare";
   src: url("/fonts/ChicagoKare-Regular.woff") format("woff");

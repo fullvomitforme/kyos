@@ -173,6 +173,11 @@ const LazyAppletViewerApp = createLazyComponent<AppletViewerInitialData>(
   "applet-viewer"
 );
 
+const LazyPomodoroApp = createLazyComponent<unknown>(
+  () => import("@/apps/pomodoro/components/PomodoroAppComponent").then(m => ({ default: m.PomodoroAppComponent })),
+  "pomodoro"
+);
+
 // ============================================================================
 // APP METADATA (loaded eagerly - small)
 // ============================================================================
@@ -192,6 +197,7 @@ import { appMetadata as pcMetadata, helpItems as pcHelpItems } from "@/apps/pc";
 import { appMetadata as terminalMetadata, helpItems as terminalHelpItems } from "@/apps/terminal";
 import { appMetadata as appletViewerMetadata, helpItems as appletViewerHelpItems } from "@/apps/applet-viewer";
 import { appMetadata as controlPanelsMetadata, helpItems as controlPanelsHelpItems } from "@/apps/control-panels";
+import { appMetadata as pomodoroMetadata, helpItems as pomodoroHelpItems } from "@/apps/pomodoro";
 
 // ============================================================================
 // APP REGISTRY
@@ -399,6 +405,20 @@ export const appRegistry = {
       maxSize: { width: 365, height: 600 },
     } as WindowConstraints,
   } as BaseApp<ControlPanelsInitialData> & { windowConfig: WindowConstraints },
+  ["pomodoro"]: {
+    id: "pomodoro",
+    name: "Pomodoro",
+    icon: { type: "image", src: pomodoroMetadata.icon },
+    description: "Pomodoro timer for productivity",
+    component: LazyPomodoroApp,
+    helpItems: pomodoroHelpItems,
+    metadata: pomodoroMetadata,
+    windowConfig: {
+      defaultSize: { width: 423, height: 305 },
+      minSize: { width: 423, height: 305 },
+      maxSize: { width: 423, height: 305 },
+    } as WindowConstraints,
+  },
 } as const;
 
 // ============================================================================
