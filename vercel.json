@@ -1,5 +1,8 @@
 {
+  "framework": null,
+  "installCommand": "bun install",
   "buildCommand": "rm -rf .vercel/output && bun run build",
+  "outputDirectory": ".vercel/output",
   "devCommand": "bun run dev",
   "headers": [
     {

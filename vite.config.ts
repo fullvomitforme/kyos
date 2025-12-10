@@ -282,9 +282,6 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  vercel: {
-    defaultSupportsResponseStreaming: true,
-  },
   build: {
     rollupOptions: {
       output: {
