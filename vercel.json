@@ -7,7 +7,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://os.ryo.lu http://localhost:3000"
+          "value": "https://os.ryo.lu http://localhost:3000 https://kyos.tazkiyaworks.fun"
         }
       ]
     },
